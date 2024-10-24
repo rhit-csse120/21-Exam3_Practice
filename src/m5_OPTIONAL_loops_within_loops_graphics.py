@@ -4,10 +4,18 @@ PRACTICE Exam 3.
 This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in 2D GRAPHICS problems.  ***
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 ###############################################################################
 # TODO: 2.  [Note: same _TODO_ as its matching one in module m1.]
@@ -36,7 +44,7 @@ import rosegraphics as rg
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
     print()
     print("Un-comment and re-comment calls in MAIN one by one as you work.")
 
@@ -45,27 +53,27 @@ def main():
 
 
 def run_test_hourglass():
-    """ Tests the    hourglass    function. """
+    """Tests the    hourglass    function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   hourglass   function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   hourglass   function:")
+    print("--------------------------------------------------")
 
-    test1 = '(n = 3, radius = 40, blue)'
-    test2 = '(n = 8, radius = 15, green)'
-    title1 = 'Hourglass, two tests: {} and {}'.format(test1, test2)
+    test1 = "(n = 3, radius = 40, blue)"
+    test2 = "(n = 8, radius = 15, green)"
+    title1 = "Hourglass, two tests: {} and {}".format(test1, test2)
     window1 = rg.RoseWindow(600, 500, title1)
 
-    hourglass(window1, 3, rg.Point(150, 200), 40, 'blue')
-    hourglass(window1, 8, rg.Point(450, 250), 15, 'green')
+    hourglass(window1, 3, rg.Point(150, 200), 40, "blue")
+    hourglass(window1, 8, rg.Point(450, 250), 15, "green")
 
     window1.close_on_mouse_click()
 
-    test3 = '(n = 6, radius = 30, red)'
-    title2 = 'Hourglass, one more test: {}'.format(test3)
+    test3 = "(n = 6, radius = 30, red)"
+    title2 = "Hourglass, one more test: {}".format(test3)
     window2 = rg.RoseWindow(400, 700, title2)
 
-    hourglass(window2, 6, rg.Point(200, 350), 30, 'red')
+    hourglass(window2, 6, rg.Point(200, 350), 30, "red")
 
     window2.close_on_mouse_click()
 
@@ -109,34 +117,31 @@ def hourglass(window, n, point, radius, color):
 
 
 def run_test_many_hourglasses():
-    """ Tests the    many_hourglasses    function. """
+    """Tests the    many_hourglasses    function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   many_hourglasses   function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   many_hourglasses   function:")
+    print("--------------------------------------------------")
 
-    test1 = '(n = 4, radius = 30, red-blue-black-green)'
-    test2 = '(n = 3, radius = 70, brown-cyan-yellow-green)'
-    title1 = 'Many hourglasses, two tests: {} and {}'.format(test1,
-                                                             test2)
+    test1 = "(n = 4, radius = 30, red-blue-black-green)"
+    test2 = "(n = 3, radius = 70, brown-cyan-yellow-green)"
+    title1 = "Many hourglasses, two tests: {} and {}".format(test1, test2)
     window1 = rg.RoseWindow(800, 400, title1)
 
     square1 = rg.Square(rg.Point(50, 150), 30)
     square2 = rg.Square(rg.Point(400, 200), 70)
 
-    many_hourglasses(window1, square1, 4,
-                     ('red', 'blue', 'black', 'green'))
-    many_hourglasses(window1, square2, 3,
-                     ('brown', 'cyan', 'yellow', 'green'))
+    many_hourglasses(window1, square1, 4, ("red", "blue", "black", "green"))
+    many_hourglasses(window1, square2, 3, ("brown", "cyan", "yellow", "green"))
     window1.close_on_mouse_click()
 
-    test3 = '(n = 7, radius = 40, red-black-blue)'
-    title2 = 'Many hourglasses, one more test: {}'.format(test3)
+    test3 = "(n = 7, radius = 40, red-black-blue)"
+    title2 = "Many hourglasses, one more test: {}".format(test3)
     window2 = rg.RoseWindow(1200, 500, title2)
 
     square3 = rg.Square(rg.Point(50, 250), 40)
 
-    many_hourglasses(window2, square3, 7, ('red', 'black', 'blue'))
+    many_hourglasses(window2, square3, 7, ("red", "black", "blue"))
 
     window2.close_on_mouse_click()
 

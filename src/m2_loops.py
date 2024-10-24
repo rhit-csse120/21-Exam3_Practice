@@ -4,10 +4,18 @@ PRACTICE Exam 3.
 This problem provides practice at:  LOOPS, including:
   ***  FOR and WHILE loops.  ***
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 ###############################################################################
 # TODO: 2.  [Note: same _TODO_ as its matching one in module m1.]
@@ -39,7 +47,7 @@ import testing_helper
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
     print()
     print("Un-comment and re-comment calls in MAIN one by one as you work.")
 
@@ -54,7 +62,7 @@ def main():
 
 
 def run_test_practice_problem3a():
-    """ Tests the   practice_problem3a  function. """
+    """Tests the   practice_problem3a  function."""
     ###########################################################################
     # TODO: 3. Implement this TEST function.
     #   It TESTS the  practice_problem3a  function defined below.
@@ -81,72 +89,55 @@ def run_test_practice_problem3a():
     #   practice_problem3a(6, 8, 0.81)
     # and compare the returned value against [7, 8] (the correct answer).
     # -------------------------------------------------------------------------
-    tests = [st.SimpleTestCase(practice_problem3a,
-                               [6, 8, 0.81],
-                               [7, 8]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-4, 9, 0.25],
-                               [0, 1, 2, 6, 7, 8]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-5, 4, 0.25],
-                               [-5, 0, 1, 2]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-3, 8, 0.65],
-                               [0, 1, 6, 7, 8]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-4, 8, 0.65],
-                               [0, 1, 6, 7, 8]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-5, 8, 0.65],
-                               [-5, 00, 1, 6, 7, 8]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-3, 3, -1.0],
-                               [-1, 0, 1, 2, 3]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-3, 4, -1.0],
-                               [-1, 0, 1, 2, 3]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-3, 5, -1.0],
-                               [-1, 0, 1, 2, 3, 5]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-3, 6, -1.0],
-                               [-1, 0, 1, 2, 3, 5, 6]),
-             st.SimpleTestCase(practice_problem3a,
-                               [30, 0, -1000],
-                               []),
-             st.SimpleTestCase(practice_problem3a,
-                               [100, 1000, 1.414],
-                               [139, 183, 516, 560, 849, 893]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-1000, 1000000, math.sqrt(2) - 0.0000000001],
-                               [286602, 599291, 911980]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-1000, 1000000, 1.414213562373],
-                               [286602]),
-             st.SimpleTestCase(practice_problem3a,
-                               [-1000, 1000000, 1.414213562374],
-                               []),
-             ]
+    tests = [
+        st.SimpleTestCase(practice_problem3a, [6, 8, 0.81], [7, 8]),
+        st.SimpleTestCase(practice_problem3a, [-4, 9, 0.25], [0, 1, 2, 6, 7, 8]),
+        st.SimpleTestCase(practice_problem3a, [-5, 4, 0.25], [-5, 0, 1, 2]),
+        st.SimpleTestCase(practice_problem3a, [-3, 8, 0.65], [0, 1, 6, 7, 8]),
+        st.SimpleTestCase(practice_problem3a, [-4, 8, 0.65], [0, 1, 6, 7, 8]),
+        st.SimpleTestCase(practice_problem3a, [-5, 8, 0.65], [-5, 00, 1, 6, 7, 8]),
+        st.SimpleTestCase(practice_problem3a, [-3, 3, -1.0], [-1, 0, 1, 2, 3]),
+        st.SimpleTestCase(practice_problem3a, [-3, 4, -1.0], [-1, 0, 1, 2, 3]),
+        st.SimpleTestCase(practice_problem3a, [-3, 5, -1.0], [-1, 0, 1, 2, 3, 5]),
+        st.SimpleTestCase(practice_problem3a, [-3, 6, -1.0], [-1, 0, 1, 2, 3, 5, 6]),
+        st.SimpleTestCase(practice_problem3a, [30, 0, -1000], []),
+        st.SimpleTestCase(
+            practice_problem3a, [100, 1000, 1.414], [139, 183, 516, 560, 849, 893]
+        ),
+        st.SimpleTestCase(
+            practice_problem3a,
+            [-1000, 1000000, math.sqrt(2) - 0.0000000001],
+            [286602, 599291, 911980],
+        ),
+        st.SimpleTestCase(
+            practice_problem3a, [-1000, 1000000, 1.414213562373], [286602]
+        ),
+        st.SimpleTestCase(practice_problem3a, [-1000, 1000000, 1.414213562374], []),
+    ]
     # More tests, with larger lists as the expected returned values
     big_list = []
     for k in range(900, 1001):
         big_list.append(k)
-    tests.append(st.SimpleTestCase(practice_problem3a,
-                                   [900, 1000,
-                                    - math.sqrt(2) + 0.00001],
-                                   big_list))
+    tests.append(
+        st.SimpleTestCase(
+            practice_problem3a, [900, 1000, -math.sqrt(2) + 0.00001], big_list
+        )
+    )
 
     big_list_without_915 = big_list.copy()
     big_list_without_915.remove(915)
-    tests.append(st.SimpleTestCase(practice_problem3a,
-                                   [900, 1000,
-                                    - math.sqrt(2) + 0.0001],
-                                   big_list_without_915))
+    tests.append(
+        st.SimpleTestCase(
+            practice_problem3a,
+            [900, 1000, -math.sqrt(2) + 0.0001],
+            big_list_without_915,
+        )
+    )
 
     # -------------------------------------------------------------------------
     # Run the tests in the   tests   list constructed above.
     # -------------------------------------------------------------------------
-    st.SimpleTestCase.run_tests('practice_problem3a', tests)
+    st.SimpleTestCase.run_tests("practice_problem3a", tests)
 
     ###########################################################################
     # TODO: 3 continued:  More tests:
@@ -220,7 +211,7 @@ def practice_problem3a(start, stop, threshold):
 
 
 def run_test_practice_problem3b():
-    """ Tests the   practice_problem3b  function. """
+    """Tests the   practice_problem3b  function."""
     ###########################################################################
     # TODO: 5. Implement this TEST function.
     #   It TESTS the  practice_problem3b  function defined below.
@@ -247,69 +238,48 @@ def run_test_practice_problem3b():
     #   practice_problem3b(-2, 2, 1.3)
     # and compare the returned value against [1, 7] (the correct answer).
     # -------------------------------------------------------------------------
-    tests = [st.SimpleTestCase(practice_problem3b,
-                               [-2, 2, 1.3],
-                               [1, 7]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-5, 3, 0.25],
-                               [-5, 0, 1]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-5, 4, 0.25],
-                               [-5, 0, 1, 2]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-5, 5, 0.25],
-                               [-5, 0, 1, 2, 6]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-5, 6, 0.25],
-                               [-5, 0, 1, 2, 6, 7]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-5, 7, 0.25],
-                               [-5, 0, 1, 2, 6, 7, 8]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-3, 3, -1.0],
-                               [-1, 0, 1]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-3, 4, -1.0],
-                               [-1, 0, 1, 2]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-3, 5, -1.0],
-                               [-1, 0, 1, 2, 3]),
-             st.SimpleTestCase(practice_problem3b,
-                               [-3, 6, -1.0],
-                               [-1, 0, 1, 2, 3, 5]),
-             st.SimpleTestCase(practice_problem3b,
-                               [30, 0, -1000],
-                               []),
-             st.SimpleTestCase(practice_problem3b,
-                               [100, 5, 1.414],
-                               [139, 183, 516, 560, 849]),
-             st.SimpleTestCase(practice_problem3b,
-                               [0, 1, 1.414213562373],
-                               [286602]),
-             ]
+    tests = [
+        st.SimpleTestCase(practice_problem3b, [-2, 2, 1.3], [1, 7]),
+        st.SimpleTestCase(practice_problem3b, [-5, 3, 0.25], [-5, 0, 1]),
+        st.SimpleTestCase(practice_problem3b, [-5, 4, 0.25], [-5, 0, 1, 2]),
+        st.SimpleTestCase(practice_problem3b, [-5, 5, 0.25], [-5, 0, 1, 2, 6]),
+        st.SimpleTestCase(practice_problem3b, [-5, 6, 0.25], [-5, 0, 1, 2, 6, 7]),
+        st.SimpleTestCase(practice_problem3b, [-5, 7, 0.25], [-5, 0, 1, 2, 6, 7, 8]),
+        st.SimpleTestCase(practice_problem3b, [-3, 3, -1.0], [-1, 0, 1]),
+        st.SimpleTestCase(practice_problem3b, [-3, 4, -1.0], [-1, 0, 1, 2]),
+        st.SimpleTestCase(practice_problem3b, [-3, 5, -1.0], [-1, 0, 1, 2, 3]),
+        st.SimpleTestCase(practice_problem3b, [-3, 6, -1.0], [-1, 0, 1, 2, 3, 5]),
+        st.SimpleTestCase(practice_problem3b, [30, 0, -1000], []),
+        st.SimpleTestCase(
+            practice_problem3b, [100, 5, 1.414], [139, 183, 516, 560, 849]
+        ),
+        st.SimpleTestCase(practice_problem3b, [0, 1, 1.414213562373], [286602]),
+    ]
     # More tests, with larger lists as the expected returned values
     big_list = []
     for k in range(888, 988):
         big_list.append(k)
-    tests.append(st.SimpleTestCase(practice_problem3b,
-                                   [888, 100,
-                                    - math.sqrt(2) + 0.00000000001],
-                                   big_list))
+    tests.append(
+        st.SimpleTestCase(
+            practice_problem3b, [888, 100, -math.sqrt(2) + 0.00000000001], big_list
+        )
+    )
 
     another_big_list = big_list.copy()
     another_big_list.remove(915)
     another_big_list.remove(959)
     another_big_list.append(988)
     another_big_list.append(989)
-    tests.append(st.SimpleTestCase(practice_problem3b,
-                                   [888, 100,
-                                    - math.sqrt(2) + 0.001],
-                                   another_big_list))
+    tests.append(
+        st.SimpleTestCase(
+            practice_problem3b, [888, 100, -math.sqrt(2) + 0.001], another_big_list
+        )
+    )
 
     # -------------------------------------------------------------------------
     # Run the tests in the   tests   list constructed above.
     # -------------------------------------------------------------------------
-    st.SimpleTestCase.run_tests('practice_problem3b', tests)
+    st.SimpleTestCase.run_tests("practice_problem3b", tests)
 
     ###########################################################################
     # TODO: 5 continued:  More tests:
@@ -409,10 +379,10 @@ def practice_problem3b(start, n, threshold):
 try:
     main()
 except Exception:
-    testing_helper.print_colored('ERROR - While running this test,',
-                                 color='red')
-    testing_helper.print_colored('your code raised the following exception:',
-                                 color='red')
+    testing_helper.print_colored("ERROR - While running this test,", color="red")
+    testing_helper.print_colored(
+        "your code raised the following exception:", color="red"
+    )
     print()
     time.sleep(1)
     raise

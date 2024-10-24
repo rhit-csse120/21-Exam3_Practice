@@ -52,35 +52,39 @@ class SimpleTestCase(object):
         print()
 
         if your_answer == self.correct_returned_value:
-            result = 'PASSED'
+            result = "PASSED"
             testing_helper.print_colored(
-                'Your code {:6} this test'.format(result), color='blue')
+                "Your code {:6} this test".format(result), color="blue"
+            )
         else:
-            result = 'FAILED'
+            result = "FAILED"
             testing_helper.print_colored(
-                'Your code {:6} this test'.format(result), color='red')
+                "Your code {:6} this test".format(result), color="red"
+            )
 
         if len(self.arguments_to_use) == 0:
-            format_string = '  ( )'
+            format_string = "  ( )"
         else:
-            f_beginning = '  {}( {} '
-            f_args = ', {}' * (len(self.arguments_to_use) - 1)
-            format_string = f_beginning + f_args + ' )'
-        print(format_string.format(self.function_to_test.__name__,
-                                   *(self.arguments_to_use)))
+            f_beginning = "  {}( {} "
+            f_args = ", {}" * (len(self.arguments_to_use) - 1)
+            format_string = f_beginning + f_args + " )"
+        print(
+            format_string.format(
+                self.function_to_test.__name__, *(self.arguments_to_use)
+            )
+        )
 
-        print('  The correct returned value is:',
-              self.correct_returned_value)
-        print('  Your code returned ..........:', your_answer)
+        print("  The correct returned value is:", self.correct_returned_value)
+        print("  Your code returned ..........:", your_answer)
 
-        return (your_answer == self.correct_returned_value)
+        return your_answer == self.correct_returned_value
 
     @staticmethod
     def run_tests(function_name, tests):
         print()
-        print('--------------------------------------------------')
-        print('Testing the   {}   function:'.format(function_name))
-        print('--------------------------------------------------')
+        print("--------------------------------------------------")
+        print("Testing the   {}   function:".format(function_name))
+        print("--------------------------------------------------")
 
         failures = 0
         for k in range(len(tests)):
@@ -91,8 +95,11 @@ class SimpleTestCase(object):
         if failures > 0:
             print()
             testing_helper.print_colored(
-                '************************************', color='red')
+                "************************************", color="red"
+            )
             testing_helper.print_colored(
-                '*** YOUR CODE FAILED SOME TESTS. ***', color='red')
+                "*** YOUR CODE FAILED SOME TESTS. ***", color="red"
+            )
             testing_helper.print_colored(
-                '************************************', color='red')
+                "************************************", color="red"
+            )

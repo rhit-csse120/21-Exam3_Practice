@@ -4,10 +4,18 @@ PRACTICE Exam 3.
 This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in PRINTING-TO-CONSOLE problems.  ***
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 
 ###############################################################################
@@ -35,27 +43,27 @@ Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
     run_test_shape()
 
 
 def run_test_shape():
-    """ Tests the    shape    function. """
+    """Tests the    shape    function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   SHAPE   function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   SHAPE   function:")
+    print("--------------------------------------------------")
 
     print()
-    print('Test 1 of shape: r=7')
+    print("Test 1 of shape: r=7")
     shape(7)
 
     print()
-    print('Test 2 of shape: r=4')
+    print("Test 2 of shape: r=4")
     shape(4)
 
     print()
-    print('Test 3 of shape: r=2')
+    print("Test 3 of shape: r=2")
     shape(2)
 
 

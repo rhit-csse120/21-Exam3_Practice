@@ -3,13 +3,21 @@ PRACTICE Exam 3.
 
 This problem provides practice at: *** INPUT from the CONSOLE. ***
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
+
 ###############################################################################
-# TODO: 2.  [Note: same _TODO_ as its matching one in module m1.]
+# TODO: 2.
 #  Students:
 #  __
 #  These problems have DIFFICULTY and TIME ratings:
@@ -37,23 +45,23 @@ import math
 
 
 def main():
-    """ TESTs the functions in this module (by calling them). """
+    """TESTs the functions in this module (by calling them)."""
     run_test_input_it_all()
 
 
 def run_test_input_it_all():
-    """ Tests the   input_it_all    function. """
+    """Tests the   input_it_all    function."""
     # -------------------------------------------------------------------------
     # TODO: 3. READ the tests below.  They require that you input specific
     #   inputs (although your function should work for any valid inputs).
     #  After you read (and understand) the above, change this _TODO_ to DONE.
     # -------------------------------------------------------------------------
     print()
-    print('--------------------------------------------------')
-    print('Testing the   input_it_all   function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   input_it_all   function:")
+    print("--------------------------------------------------")
 
-    format_string = '    input_it_all()'
+    format_string = "    input_it_all()"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # -------------------------------------------------------------------------
@@ -69,8 +77,7 @@ def run_test_input_it_all():
     # Test 2:  for this test, you must ENTER INPUTS exactly as described
     #          in the SECOND example in the specification of input_it_all.
     # -------------------------------------------------------------------------
-    expected = \
-        "4 3.48 7.48 0.93 Peace & LovePeace & LovePeace & LovePeace & Love"
+    expected = "4 3.48 7.48 0.93 Peace & LovePeace & LovePeace & LovePeace & Love"
     print_expected_result_of_test([], expected, test_results, format_string)
     actual = input_it_all()
     print_actual_result_of_test(expected, actual, test_results)
@@ -137,22 +144,23 @@ def input_it_all():
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
 
+
 def print_function_call_of_test(arguments, test_results, format_string):
-    testing_helper.print_function_call_of_test(arguments, test_results,
-                                               format_string)
+    testing_helper.print_function_call_of_test(arguments, test_results, format_string)
 
 
-def print_expected_result_of_test(arguments, expected,
-                                  test_results, format_string, suffix=''):
-    testing_helper.print_expected_result_of_test(arguments, expected,
-                                                 test_results, format_string,
-                                                 suffix)
+def print_expected_result_of_test(
+    arguments, expected, test_results, format_string, suffix=""
+):
+    testing_helper.print_expected_result_of_test(
+        arguments, expected, test_results, format_string, suffix
+    )
 
 
-def print_actual_result_of_test(expected, actual, test_results,
-                                precision=None):
-    testing_helper.print_actual_result_of_test(expected, actual,
-                                               test_results, precision)
+def print_actual_result_of_test(expected, actual, test_results, precision=None):
+    testing_helper.print_actual_result_of_test(
+        expected, actual, test_results, precision
+    )
 
 
 def print_summary_of_test_results(test_results):
@@ -178,8 +186,8 @@ else:
 try:
     main()
 except Exception:
-    print('ERROR - While running this test,', color='red')
-    print('your code raised the following exception:', color='red')
+    print("ERROR - While running this test,", color="red")
+    print("your code raised the following exception:", color="red")
     print()
     time.sleep(1)
     raise
